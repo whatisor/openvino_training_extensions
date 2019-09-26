@@ -14,12 +14,14 @@
 
 ### Installation
 
-1. Create virtual environment
+1. Do step from [tensorflow_toolkit/README.md](../README.md)
+
+2. Create virtual environment
 ```bash
 virtualenv venv -p python3 --prompt="(lpr)"
 ```
 
-2. Activate virtual environment and setup OpenVINO variables
+3. Activate virtual environment and setup OpenVINO variables
 ```bash
 . venv/bin/activate
 . /opt/intel/openvino/bin/setupvars.sh
@@ -29,7 +31,7 @@ virtualenv venv -p python3 --prompt="(lpr)"
 echo ". /opt/intel/openvino/bin/setupvars.sh" >> venv/bin/activate
 ```
 
-3. Install the modules
+4. Install the modules
 ```bash
 pip3 install -e .
 pip3 install -e ../utils
