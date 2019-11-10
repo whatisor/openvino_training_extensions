@@ -31,7 +31,7 @@ if __name__ == '__main__':
     net = PoseEstimationWithMobileNet()
     if args.single_person:
         net = SinglePersonPoseEstimationWithMobileNet()
-    checkpoint = torch.load(args.checkpoint_path)
+    checkpoint = torch.load(args.checkpoint_path,map_location='cpu')
     load_state(net, checkpoint)
 
     convert_to_onnx(net, args.output_name, args.single_person)
